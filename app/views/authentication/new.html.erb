@@ -1,0 +1,20 @@
+<h1>Sign In </h1>
+
+<div classname="flash-messages">
+  <% flash.each do |type, msg| %>
+    <div>
+      <%= msg %>
+    </div>
+  <% end %>
+</div>
+
+<%= form_with url: sign_in_path do |f| %>
+
+<%= f.label :Email %>
+<%= f.text_field :email %>
+
+<%= f.label :Password %>
+<%= f.password_field :password %>
+
+<%= f.submit "Sign in" %>
+<% end %>

@@ -1,0 +1,22 @@
+<h1>Sign Up </h1>
+
+<div classname="signup-form">
+  <div classname="flash-messages">
+    <% flash.each do |type, msg| %>
+      <div>
+        <%= msg %>
+      </div>
+    <% end %>
+  </div>
+
+  <%= form_with model: @new_user, url: sign_up_path do |f|  %>
+    <%= f.label :username %>
+    <%= f.text_field :username %>
+
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+
+    <%= f.submit "Sign Up" %>
+  <% end %>
+</div>
+
