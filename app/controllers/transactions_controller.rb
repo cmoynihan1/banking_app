@@ -44,7 +44,7 @@ class TransactionsController < ApplicationController
 
   def update_balances
     Current.user.update!(balance: Current.user.balance + @transaction_amount)
-    @recipient.update!(balance: @recipient.balance + (-@transaction_amount)) if @recipient
+    @recipient.update!(balance: @recipient.reload.balance + (-@transaction_amount)) if @recipient
   end
 
   def transaction_params
