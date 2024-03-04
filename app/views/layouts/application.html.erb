@@ -11,10 +11,7 @@
 
   <body>
     <% if Current.user %>
-      <div class="navbar">
-        <div>Navbar</div>
-        <div class="username"><%= Current.user.username %></div>
-      </div>
+     <%= render partial: 'navigation/navbar' %>
     <% end %>
     <div class="content">
       <%= yield %>

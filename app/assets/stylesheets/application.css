@@ -24,9 +24,10 @@ body{
     position: fixed;
     background: white;
     height: 40px;
-    padding: 10px 0px 10px 10px;
+    padding: 10px 0px 0px 10px;
     display: flex;
     top: 0;
+    gap: 10px;
 
     .username{
         margin-left: auto;
@@ -38,7 +39,7 @@ body{
 .content{
     margin: auto;
     max-width: 1000px;
-    padding: 40px 10px 10px 10px;
+    padding: 60px 10px 10px 10px;
     background: white;
     min-height: 100%;
 }

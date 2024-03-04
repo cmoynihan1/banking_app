@@ -1,11 +1,10 @@
 <div>Home Page</div>
 
 <% if Current.user %>
-  Logged in as: <%= Current.user.username %><br>
   <%= button_to 'Balance', 'balance' %>
   <%= button_to 'Withdraw', 'balance' %>
   <%= button_to 'Deposit', 'balance' %>
-  <%= button_to 'Transactions', 'transactions', :method => :get %>
+
   <%= button_to 'Transfer', 'transactions' %>
 
   <%= button_to "Sign Out", logout_path,  method: :delete %>
