@@ -1,24 +1,16 @@
-# README
+# READ ME
+###  APP INFORMATION
+##### Ruby ->  3.2.2
+##### Rails ->  7.1.3
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Running Instructions
+1. run <mark> bundle install </mark>
+2. run <mark> rails db:setup </mark>
+3. run <mark> rake db:seed </mark>
+4. run server <mark> rails server </mark>
+5. visit localhost:300
 
-Things you may want to cover:
+#### Application Assumptions
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Users can have negative balances
+* 1 Silveuro is the smallest currency denomination
