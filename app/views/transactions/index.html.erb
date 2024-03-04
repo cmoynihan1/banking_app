@@ -1,11 +1,13 @@
 
 <h2>Transactions</h2>
+<a href="new_transaction/withdrawal">Withdraw</a>
+<a href="new_transaction/deposit">Deposit</a>
+<a href="new_transaction/transfer">Transfer</a>
 <div class="transactions-table">
   <table>
     <tr>
       <td> Transaction Type </td>
       <td> Amount </td>
-      <td> Balance After </td>
       <td> From Account </td>
       <td> Date </td>
     </tr>
@@ -14,7 +16,6 @@
       <tr class=<%= transaction.transaction_type %>>
         <td><%= transaction.transaction_type.capitalize %></td>
         <td><%= transaction.amount %></td>
-        <td><%= transaction.balance_after || 0 %></td>
         <td><%= transaction.from_account&.username || '' %></td>
         <td><%= transaction.created_at %></td>
       </tr>

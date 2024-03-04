@@ -1,0 +1,22 @@
+
+<%= form_with model: @transaction, url: create_transaction_path do |f|  %>
+  <%= @transaction.transaction_type&.capitalize %>
+
+  <br>
+
+  <%= f.label :Amount %>
+  <%= f.number_field :amount %>
+
+  <% if @transaction.transaction_type == 'transfer'%>
+    <label for="recipient">Recipient</label>
+    <input type="text" name="recipient" id="recipient">
+  <% end%>
+
+  <input autocomplete="off" type="hidden"
+         value=<%=@transaction.transaction_type%> name="transaction[transaction_type]" id="transaction_type">
+  <input autocomplete="off" type="hidden"
+         value=<%=Current.user.username %> name="username" id=username">
+
+
+  <%= f.submit "Process" %>
+<% end %>

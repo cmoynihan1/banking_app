@@ -1,11 +1,10 @@
-<div>Home Page</div>
+<h2>Home Page</h2>
 
 <% if Current.user %>
-  <%= button_to 'Balance', 'balance' %>
-  <%= button_to 'Withdraw', 'balance' %>
-  <%= button_to 'Deposit', 'balance' %>
-
-  <%= button_to 'Transfer', 'transactions' %>
+  <div>
+    Balance: <%= Current.user.balance %> Silveuros
+  </div>
+  <br>
 
   <%= button_to "Sign Out", logout_path,  method: :delete %>
 <% else %>

@@ -8,5 +8,4 @@ class Transaction < ApplicationRecord
 
   validates :transaction_type, inclusion: { in: TRANSACTION_TYPES }
   validates :amount, presence: true
-
 end
