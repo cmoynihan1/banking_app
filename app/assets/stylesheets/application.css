@@ -13,3 +13,29 @@
  *= require_tree .
  *= require_self
  */
+
+body{
+    background: lightgray;
+    margin: 0;
+}
+
+.navbar{
+    width: 100vw;
+    background: white;
+    height: 40px;
+    padding: 5px;
+    display: flex;
+
+    .username{
+        margin-left: auto;
+    }
+
+}
+
+.content{
+    margin: auto;
+    max-width: 1000px;
+    padding: 10px;
+    background: white;
+    min-height: 100%;
+}

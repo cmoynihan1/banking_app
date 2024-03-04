@@ -10,6 +10,14 @@
   </head>
 
   <body>
-    <%= yield %>
+    <% if Current.user %>
+      <div class="navbar">
+        <div>Navbar</div>
+        <div class="username"><%= Current.user.username %></div>
+      </div>
+    <% end %>
+    <div class="content">
+      <%= yield %>
+    </div>
   </body>
 </html>

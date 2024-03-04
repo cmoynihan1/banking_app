@@ -1,7 +1,13 @@
-<h1>Welcome Page</h1>
+<div>Home Page</div>
 
 <% if Current.user %>
   Logged in as: <%= Current.user.username %><br>
+  <%= button_to 'Balance', 'balance' %>
+  <%= button_to 'Withdraw', 'balance' %>
+  <%= button_to 'Deposit', 'balance' %>
+  <%= button_to 'Transactions', 'transactions' %>
+  <%= button_to 'Transfer', 'transactions' %>
+
   <%= button_to "Sign Out", logout_path,  method: :delete %>
 <% else %>
   <%= link_to "Sign up", sign_up_path %>
