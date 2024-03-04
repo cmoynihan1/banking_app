@@ -20,14 +20,17 @@ body{
 }
 
 .navbar{
-    width: 100vw;
+    width: 100%;
+    position: fixed;
     background: white;
     height: 40px;
-    padding: 5px;
+    padding: 10px 0px 10px 10px;
     display: flex;
+    top: 0;
 
     .username{
         margin-left: auto;
+        padding-right: 20px;
     }
 
 }
@@ -35,7 +38,25 @@ body{
 .content{
     margin: auto;
     max-width: 1000px;
-    padding: 10px;
+    padding: 40px 10px 10px 10px;
     background: white;
     min-height: 100%;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+.deposit{
+    background: lightblue ;
+}
+
+.withdrawal{
+    background: lightcoral;
 }

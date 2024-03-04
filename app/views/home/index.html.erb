@@ -5,7 +5,7 @@
   <%= button_to 'Balance', 'balance' %>
   <%= button_to 'Withdraw', 'balance' %>
   <%= button_to 'Deposit', 'balance' %>
-  <%= button_to 'Transactions', 'transactions' %>
+  <%= button_to 'Transactions', 'transactions', :method => :get %>
   <%= button_to 'Transfer', 'transactions' %>
 
   <%= button_to "Sign Out", logout_path,  method: :delete %>

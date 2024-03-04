@@ -1,0 +1,24 @@
+
+<h2>Transactions</h2>
+<div class="transactions-table">
+  <table>
+    <tr>
+      <td> Transaction Type </td>
+      <td> Amount </td>
+      <td> Balance After </td>
+      <td> From Account </td>
+      <td> Date </td>
+    </tr>
+
+    <% @transactions.each do |transaction| %>
+      <tr class=<%= transaction.transaction_type %>>
+        <td><%= transaction.transaction_type.capitalize %></td>
+        <td><%= transaction.amount %></td>
+        <td><%= transaction.balance_after || 0 %></td>
+        <td><%= transaction.from_account&.username || '' %></td>
+        <td><%= transaction.created_at %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>
+
